@@ -1,13 +1,16 @@
+using System.Collections.Generic;
 using Jotunn.Configs;
 using Jotunn.Entities;
 using Jotunn.Managers;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace Spearbreaker
 {
     /// <summary>
     /// Adds the Spearbreaker charm: a copy of the vanilla Heart of the Forest whose equip effect is
-    /// <see cref="SE_SpearbreakerPassive"/> and whose full-adrenaline effect is <see cref="SE_Spearbreaker"/>. Every copy of an item shares its prefab's SharedData, so changing
+    /// <see cref="SE_SpearbreakerPassive"/> and whose full-adrenaline effect is <see cref="SE_Spearbreaker"/>,
+    /// recoloured to blue-grey tin. Every copy of an item shares its prefab's SharedData, so changing
     /// the adrenaline cost there (when the server syncs its config) updates charms already crafted.
     /// </summary>
     internal static class SpearbreakerItem
@@ -16,6 +19,9 @@ namespace Spearbreaker
         // Vanilla Heart of the Forest: a Forge trinket of the same tier, so the copy looks and equips like one.
         private const string BasePrefab = "TrinketBronzeHealth";
         private const string IconResource = "Spearbreaker.icon.png";
+        // Blue-grey tin. The base texture is turned grey first, so the tint replaces the bronze instead of
+        // mixing with it; this covers the dropped model and the one drawn on the character alike.
+        private static readonly Color Tint = new Color(0.78f, 0.86f, 1f);
 
         private static ItemDrop.ItemData.SharedData s_shared;
 
@@ -60,6 +66,7 @@ namespace Spearbreaker
                 Jotunn.Logger.LogWarning($"Vanilla trinket '{BasePrefab}' not found; the Spearbreaker charm is not added.");
                 return;
             }
+            Recolor(item.ItemPrefab);
             s_shared = item.ItemDrop.m_itemData.m_shared;
             // Replaces any equip effect inherited from the Heart of the Forest.
             s_shared.m_equipStatusEffect = passive;
@@ -68,6 +75,58 @@ namespace Spearbreaker
             ItemManager.Instance.AddItem(item);
 
             SpearbreakerPlugin.AdrenalineToFill.SettingChanged += (_, __) => s_shared.m_maxAdrenaline = SpearbreakerPlugin.AdrenalineToFill.Value;
+        }
+
+        private static void Recolor(GameObject prefab)
+        {
+            // A dedicated server runs without a graphics device, and nobody there sees the charm.
+            if (SystemInfo.graphicsDeviceType == GraphicsDeviceType.Null) return;
+
+            var greyed = new Dictionary<Texture, Texture2D>();
+            // Includes inactive children: the "attach" model drawn on the character is one.
+            foreach (var renderer in prefab.GetComponentsInChildren<Renderer>(true))
+            {
+                var materials = renderer.sharedMaterials;
+                for (int i = 0; i < materials.Length; i++)
+                {
+                    if (!materials[i]) continue;
+                    // A copy: the clone still shares its materials with the vanilla Heart of the Forest.
+                    var material = new Material(materials[i]);
+                    var texture = material.HasProperty("_MainTex") ? material.mainTexture : null;
+                    if (texture)
+                    {
+                        if (!greyed.TryGetValue(texture, out var grey)) greyed[texture] = grey = Greyscale(texture);
+                        material.mainTexture = grey;
+                    }
+                    if (material.HasProperty("_Color")) material.color = Tint;
+                    materials[i] = material;
+                }
+                renderer.sharedMaterials = materials;
+            }
+        }
+
+        private static Texture2D Greyscale(Texture source)
+        {
+            // Vanilla textures aren't readable from the CPU; copy through a render texture to get the pixels.
+            var target = RenderTexture.GetTemporary(source.width, source.height, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB);
+            var previous = RenderTexture.active;
+            Graphics.Blit(source, target);
+            RenderTexture.active = target;
+            var copy = new Texture2D(source.width, source.height, TextureFormat.RGBA32, true) { name = source.name + "_spearbreaker" };
+            copy.ReadPixels(new Rect(0f, 0f, source.width, source.height), 0, 0);
+            RenderTexture.active = previous;
+            RenderTexture.ReleaseTemporary(target);
+
+            var pixels = copy.GetPixels32();
+            for (int i = 0; i < pixels.Length; i++)
+            {
+                var p = pixels[i];
+                var luma = (byte)((p.r * 299 + p.g * 587 + p.b * 114) / 1000);
+                pixels[i] = new Color32(luma, luma, luma, p.a);
+            }
+            copy.SetPixels32(pixels);
+            copy.Apply(true, true);
+            return copy;
         }
 
         private static Sprite LoadIcon()

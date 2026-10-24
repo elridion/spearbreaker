@@ -1,6 +1,6 @@
 # Spearbreaker
 
-A bronze trinket that lets spears punch through pierce resistance, with a burst of extra damage at
+A blue-grey tin trinket that lets spears punch through pierce resistance, with a burst of extra damage at
 full adrenaline.
 
 ## Why
