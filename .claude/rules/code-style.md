@@ -38,6 +38,6 @@ next to the game classes it extends.
 - Log through `Jotunn.Logger` (`LogWarning` for skipped content or degraded features, `LogError` for a
   failure to set up content). No `Debug.Log`. No diagnostic logging left in committed code.
 - A missing vanilla prefab or resource logs a warning and skips that feature, never throws (a missing
-  Bronze Pendant skips the charm; a missing icon keeps the Bronze Pendant's).
+  Heart of the Forest skips the charm; a missing icon keeps the Heart of the Forest's).
 - Damage patches run for every hit in the game: bail out on the cheapest check first and never
   allocate or log there.

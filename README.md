@@ -31,7 +31,7 @@ The build touches nothing outside the repo. To test in game, install the zip wit
 | `tools/make_icons.ps1` | Generates `assets/icon.png` and `package/icon.png` from game-icons.net |
 | `package/` | Mod page README and icon shipped in the package |
 
-No Unity project or asset bundles: the trinket is a copy of the vanilla Bronze Pendant.
+No Unity project or asset bundles: the trinket is a copy of the vanilla Heart of the Forest.
 
 ## Releases
 

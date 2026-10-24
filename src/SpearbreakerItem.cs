@@ -6,15 +6,15 @@ using UnityEngine;
 namespace Spearbreaker
 {
     /// <summary>
-    /// Adds the Spearbreaker charm: a copy of the vanilla Bronze Pendant whose full-adrenaline effect is
-    /// <see cref="SE_Spearbreaker"/>. Every copy of an item shares its prefab's SharedData, so changing
+    /// Adds the Spearbreaker charm: a copy of the vanilla Heart of the Forest whose equip effect is
+    /// <see cref="SE_SpearbreakerPassive"/> and whose full-adrenaline effect is <see cref="SE_Spearbreaker"/>. Every copy of an item shares its prefab's SharedData, so changing
     /// the adrenaline cost there (when the server syncs its config) updates charms already crafted.
     /// </summary>
     internal static class SpearbreakerItem
     {
         public const string PrefabName = "TrinketSpearbreaker";
-        // Vanilla Bronze Pendant: a Forge trinket of the same tier, so the copy looks and equips like one.
-        private const string BasePrefab = "TrinketBronzeStamina";
+        // Vanilla Heart of the Forest: a Forge trinket of the same tier, so the copy looks and equips like one.
+        private const string BasePrefab = "TrinketBronzeHealth";
         private const string IconResource = "Spearbreaker.icon.png";
 
         private static ItemDrop.ItemData.SharedData s_shared;
@@ -32,6 +32,12 @@ namespace Spearbreaker
             effect.m_icon = icon;
             effect.m_ttl = SpearbreakerPlugin.Duration.Value;
             ItemManager.Instance.AddStatusEffect(new CustomStatusEffect(effect, false));
+
+            var passive = ScriptableObject.CreateInstance<SE_SpearbreakerPassive>();
+            passive.name = SE_SpearbreakerPassive.EffectName;
+            passive.m_name = "$se_spearbreaker_passive";
+            passive.m_icon = icon;
+            ItemManager.Instance.AddStatusEffect(new CustomStatusEffect(passive, false));
 
             var config = new ItemConfig
             {
@@ -55,6 +61,8 @@ namespace Spearbreaker
                 return;
             }
             s_shared = item.ItemDrop.m_itemData.m_shared;
+            // Replaces any equip effect inherited from the Heart of the Forest.
+            s_shared.m_equipStatusEffect = passive;
             s_shared.m_fullAdrenalineSE = effect;
             s_shared.m_maxAdrenaline = SpearbreakerPlugin.AdrenalineToFill.Value;
             ItemManager.Instance.AddItem(item);
@@ -68,7 +76,7 @@ namespace Spearbreaker
             {
                 if (stream == null)
                 {
-                    Jotunn.Logger.LogWarning($"Embedded icon '{IconResource}' not found; the charm keeps the Bronze Pendant's icon.");
+                    Jotunn.Logger.LogWarning($"Embedded icon '{IconResource}' not found; the charm keeps the Heart of the Forest's icon.");
                     return null;
                 }
 
@@ -80,7 +88,7 @@ namespace Spearbreaker
                 var texture = new Texture2D(2, 2, TextureFormat.RGBA32, false) { name = "spearbreaker_icon" };
                 if (!Jotunn.Utils.AssetUtils.LoadImage(texture, bytes))
                 {
-                    Jotunn.Logger.LogWarning($"Embedded icon '{IconResource}' failed to decode; the charm keeps the Bronze Pendant's icon.");
+                    Jotunn.Logger.LogWarning($"Embedded icon '{IconResource}' failed to decode; the charm keeps the Heart of the Forest's icon.");
                     Object.Destroy(texture);
                     return null;
                 }

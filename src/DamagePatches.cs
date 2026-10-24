@@ -3,11 +3,10 @@ using HarmonyLib;
 namespace Spearbreaker
 {
     /// <summary>
-    /// Caps a creature's pierce resistance at normal for spear hits from a player with Spearbreaker
-    /// active. Vanilla looks the resistances up in <c>GetDamageModifiers</c> from inside
+    /// Shifts a creature's pierce modifier one step weaker for spear hits from a player wearing the
+    /// Spearbreaker charm. Vanilla looks the modifiers up in <c>GetDamageModifiers</c> from inside
     /// <c>RPC_Damage</c>, which runs where the creature is owned; the hit being resolved is remembered
-    /// for that call only. Immunity and weaknesses are left alone, and players hit in PvP keep vanilla
-    /// resistances.
+    /// for that call only. Immunity is left alone, and players hit in PvP keep vanilla modifiers.
     /// </summary>
     [HarmonyPatch(typeof(Character))]
     internal static class DamagePatches
@@ -36,17 +35,19 @@ namespace Spearbreaker
         [HarmonyPatch(nameof(Character.GetDamageModifiers))]
         private static void GetDamageModifiers_Postfix(Character __instance, ref HitData.DamageModifiers __result)
         {
-            if (s_hit == null || __instance != s_target || !Bypasses(__instance, s_hit)) return;
-            __result.m_pierce = CapResistance(__result.m_pierce);
+            if (s_hit == null || __instance != s_target || !Applies(__instance, s_hit)) return;
+            __result.m_pierce = Weaken(__result.m_pierce);
         }
 
-        private static bool Bypasses(Character target, HitData hit)
+        private static bool Applies(Character target, HitData hit)
         {
             if (target.IsPlayer() || hit.m_skill != Skills.SkillType.Spears || hit.m_damage.m_pierce <= 0f) return false;
-            return hit.GetAttacker() is Player attacker && attacker.GetSEMan().HaveStatusAttribute(SE_Spearbreaker.BypassAttribute);
+            return hit.GetAttacker() is Player attacker && attacker.GetSEMan().HaveStatusAttribute(SE_SpearbreakerPassive.BypassAttribute);
         }
 
-        private static HitData.DamageModifier CapResistance(HitData.DamageModifier modifier)
+        // Every resistance drops to normal, normal becomes weak, and weaknesses go one step further.
+        // VeryWeak is already the weakest modifier vanilla has; Immune and Ignore stay as they are.
+        private static HitData.DamageModifier Weaken(HitData.DamageModifier modifier)
         {
             switch (modifier)
             {
@@ -54,6 +55,11 @@ namespace Spearbreaker
                 case HitData.DamageModifier.VeryResistant:
                 case HitData.DamageModifier.SlightlyResistant:
                     return HitData.DamageModifier.Normal;
+                case HitData.DamageModifier.Normal:
+                case HitData.DamageModifier.SlightlyWeak:
+                    return HitData.DamageModifier.Weak;
+                case HitData.DamageModifier.Weak:
+                    return HitData.DamageModifier.VeryWeak;
                 default:
                     return modifier;
             }

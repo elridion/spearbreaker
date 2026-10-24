@@ -1,18 +1,25 @@
 # Spearbreaker
 
-A bronze trinket that lets spears punch through pierce resistance.
+A bronze trinket that lets spears punch through pierce resistance, with a burst of extra damage at
+full adrenaline.
 
-In vanilla, spears and bows share one damage type, pierce, so every creature that shrugs off arrows
-shrugs off spears too. The Spearbreaker charm gives spear fighters their own answer.
+## Why
+
+Spear and bow make same hurt: pierce. Monster laugh at arrow, monster laugh at spear too. Spear sad.
+
+Charm fix. Wear charm, spear find gap in monster skin. Fight hard, charm get angry, spear hit twice
+as hard. Bow get nothing. Spear happy.
 
 ## The Spearbreaker charm
 
-- A trinket, worn in the trinket slot like the vanilla ones. Fighting fills its adrenaline bar; when
-  it is full, the charm's effect fires.
-- **Effect (30 s):** your spear hits ignore pierce resistance and deal 15% more pierce damage.
-  - Creatures that resist pierce take normal pierce damage instead.
-  - Creatures weak to pierce stay weak.
+- A trinket, worn in the trinket slot like the vanilla ones.
+- **Passive (while worn):** your spear hits treat creatures as one step weaker to pierce.
+  - Creatures that resist pierce (slightly, normally or very) take normal pierce damage.
+  - Creatures with no pierce modifier take pierce damage as if weak to it.
+  - Creatures slightly weak to pierce become weak; weak becomes very weak.
   - Creatures immune to pierce stay immune.
+- **Active (30 s):** fighting fills the charm's adrenaline bar; when it is full, your spear hits deal
+  100% more pierce damage, on top of the passive.
 - Works for melee spear attacks and thrown spears. Bows, crossbows and atgeirs are unchanged.
 - Only affects creatures: in PvP, players keep their own resistances.
 
@@ -26,9 +33,9 @@ Forge: 5 Bronze, 2 Troll trophies, 3 Rubies.
 
 | Setting | Default | Meaning |
 | --- | --- | --- |
-| `Duration` | 30 | Seconds the effect lasts |
-| `AdrenalineToFill` | 50 | Adrenaline needed to fire the effect (vanilla Bronze Pendant: 50) |
-| `PierceBonus` | 0.15 | Extra pierce damage on spear hits while active (0.15 = +15%) |
+| `Duration` | 30 | Seconds the active effect lasts |
+| `AdrenalineToFill` | 50 | Adrenaline needed to fire the active effect (vanilla Heart of the Forest: 50) |
+| `PierceBonus` | 1 | Extra pierce damage on spear hits while the active effect lasts (1 = +100%) |
 
 ## Requirements
 

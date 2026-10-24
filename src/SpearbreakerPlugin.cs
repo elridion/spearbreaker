@@ -30,11 +30,11 @@ namespace Spearbreaker
                 new ConfigDescription("Seconds the effect lasts once the trinket's adrenaline is full.",
                     new AcceptableValueRange<float>(5f, 300f), adminOnly));
             AdrenalineToFill = Config.Bind("Trinket", "AdrenalineToFill", 50f,
-                new ConfigDescription("Adrenaline the trinket needs before its effect fires (vanilla Bronze Pendant: 50).",
+                new ConfigDescription("Adrenaline the trinket needs before its effect fires (vanilla Heart of the Forest: 50).",
                     new AcceptableValueRange<float>(10f, 200f), adminOnly));
-            PierceBonus = Config.Bind("Trinket", "PierceBonus", 0.15f,
-                new ConfigDescription("Extra pierce damage on spear hits while the effect lasts, as a fraction (0.15 = +15%).",
-                    new AcceptableValueRange<float>(0f, 2f), adminOnly));
+            PierceBonus = Config.Bind("Trinket", "PierceBonus", 1f,
+                new ConfigDescription("Extra pierce damage on spear hits while the full-adrenaline effect lasts, as a fraction (1 = +100%).",
+                    new AcceptableValueRange<float>(0f, 3f), adminOnly));
 
             AddLocalizations();
             PrefabManager.OnVanillaPrefabsAvailable += SpearbreakerItem.Register;
@@ -54,9 +54,11 @@ namespace Spearbreaker
             {
                 { "item_trinket_spearbreaker", "Spearbreaker charm" },
                 { "item_trinket_spearbreaker_description", "A bronze shard of a split shield. Spears remember the hide they could not pierce." },
-                { "se_spearbreaker", "Spearbreaker" },
+                { "se_spearbreaker", "Spearbreaker surge" },
                 { "se_spearbreaker_start", "Your spear finds the gaps" },
-                { "se_spearbreaker_tooltip", "Spear hits ignore pierce resistance and deal $1% more pierce damage for $2 s." },
+                { "se_spearbreaker_tooltip", "Spear hits deal $1% more pierce damage for $2 s." },
+                { "se_spearbreaker_passive", "Spearbreaker" },
+                { "se_spearbreaker_passive_tooltip", "Spear hits find the gaps: creatures that resist pierce take normal damage, others take pierce damage as if one step weaker to it." },
             });
         }
     }
