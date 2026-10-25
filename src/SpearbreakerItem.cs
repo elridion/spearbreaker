@@ -29,13 +29,20 @@ namespace Spearbreaker
         {
             PrefabManager.OnVanillaPrefabsAvailable -= Register;
 
-            var icon = LoadIcon();
+            // The Heart of the Forest's own icons, tinted like the model; the embedded icon only stands in
+            // when one is missing.
+            var vanilla = VanillaShared();
+            var icon = Tinted(vanilla != null && vanilla.m_icons != null && vanilla.m_icons.Length > 0 ? vanilla.m_icons[0] : null);
+            if (!icon) icon = LoadIcon();
+            var surgeIcon = Tinted(vanilla != null && vanilla.m_fullAdrenalineSE ? vanilla.m_fullAdrenalineSE.m_icon : null);
+            if (!surgeIcon) surgeIcon = icon;
+
             var effect = ScriptableObject.CreateInstance<SE_Spearbreaker>();
             effect.name = SE_Spearbreaker.EffectName;
             effect.m_name = "$se_spearbreaker";
             effect.m_startMessage = "$se_spearbreaker_start";
             effect.m_startMessageType = MessageHud.MessageType.TopLeft;
-            effect.m_icon = icon;
+            effect.m_icon = surgeIcon;
             effect.m_ttl = SpearbreakerPlugin.Duration.Value;
             ItemManager.Instance.AddStatusEffect(new CustomStatusEffect(effect, false));
 
@@ -105,28 +112,62 @@ namespace Spearbreaker
             }
         }
 
+        private static ItemDrop.ItemData.SharedData VanillaShared()
+        {
+            var prefab = PrefabManager.Instance.GetPrefab(BasePrefab);
+            var drop = prefab ? prefab.GetComponent<ItemDrop>() : null;
+            return drop ? drop.m_itemData.m_shared : null;
+        }
+
         private static Texture2D Greyscale(Texture source)
+        {
+            var copy = ReadableCopy(source, new Rect(0f, 0f, source.width, source.height), true);
+            copy.name = source.name + "_spearbreaker";
+            Recolor(copy, Color.white);
+            return copy;
+        }
+
+        // A greyed copy of a vanilla sprite multiplied by the tint: the same recolour the model gets.
+        private static Sprite Tinted(Sprite source)
+        {
+            if (!source) return null;
+            // A dedicated server has no graphics device to copy with, and draws no icons anyway.
+            if (SystemInfo.graphicsDeviceType == GraphicsDeviceType.Null) return source;
+
+            // The sprite may be one cell of an atlas; copy only its own rectangle.
+            var rect = source.textureRect;
+            var copy = ReadableCopy(source.texture, rect, false);
+            copy.name = source.name + "_spearbreaker";
+            copy.wrapMode = TextureWrapMode.Clamp;
+            Recolor(copy, Tint);
+            return Sprite.Create(copy, new Rect(0f, 0f, copy.width, copy.height), new Vector2(0.5f, 0.5f), source.pixelsPerUnit);
+        }
+
+        private static Texture2D ReadableCopy(Texture source, Rect rect, bool mipmaps)
         {
             // Vanilla textures aren't readable from the CPU; copy through a render texture to get the pixels.
             var target = RenderTexture.GetTemporary(source.width, source.height, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB);
             var previous = RenderTexture.active;
             Graphics.Blit(source, target);
             RenderTexture.active = target;
-            var copy = new Texture2D(source.width, source.height, TextureFormat.RGBA32, true) { name = source.name + "_spearbreaker" };
-            copy.ReadPixels(new Rect(0f, 0f, source.width, source.height), 0, 0);
+            var copy = new Texture2D((int)rect.width, (int)rect.height, TextureFormat.RGBA32, mipmaps);
+            copy.ReadPixels(rect, 0, 0);
             RenderTexture.active = previous;
             RenderTexture.ReleaseTemporary(target);
+            return copy;
+        }
 
-            var pixels = copy.GetPixels32();
+        private static void Recolor(Texture2D texture, Color tint)
+        {
+            var pixels = texture.GetPixels32();
             for (int i = 0; i < pixels.Length; i++)
             {
                 var p = pixels[i];
-                var luma = (byte)((p.r * 299 + p.g * 587 + p.b * 114) / 1000);
-                pixels[i] = new Color32(luma, luma, luma, p.a);
+                var luma = (p.r * 299 + p.g * 587 + p.b * 114) / 1000f;
+                pixels[i] = new Color32((byte)(luma * tint.r), (byte)(luma * tint.g), (byte)(luma * tint.b), p.a);
             }
-            copy.SetPixels32(pixels);
-            copy.Apply(true, true);
-            return copy;
+            texture.SetPixels32(pixels);
+            texture.Apply(true, true);
         }
 
         private static Sprite LoadIcon()

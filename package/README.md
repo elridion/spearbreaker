@@ -10,15 +10,15 @@ Spear and bow make same hurt: pierce. Monster laugh at arrow, monster laugh at s
 Charm fix. Wear charm, spear find gap in monster skin. Fight hard, charm get angry, spear hit twice
 as hard. Bow get nothing. Spear happy.
 
-## The Spearbreaker charm
+## The Spearbreaker trinket
 
 - A trinket, worn in the trinket slot like the vanilla ones.
-- **Passive (while worn):** your spear hits treat creatures as one step weaker to pierce.
+- **Gungnir's Aim (while worn):** your spear hits treat creatures as one step weaker to pierce.
   - Creatures that resist pierce (slightly, normally or very) take normal pierce damage.
   - Creatures with no pierce modifier take pierce damage as if weak to it.
   - Creatures slightly weak to pierce become weak; weak becomes very weak.
   - Creatures immune to pierce stay immune.
-- **Active (30 s):** fighting fills the charm's adrenaline bar; when it is full, your spear hits deal
+- **Odin's Claim (30 s):** fighting fills the trinket's adrenaline bar; when it is full, your spear hits deal
   100% more pierce damage, on top of the passive.
 - Works for melee spear attacks and thrown spears. Bows, crossbows and atgeirs are unchanged.
 - Only affects creatures: in PvP, players keep their own resistances.
@@ -51,7 +51,7 @@ since the game no longer knows the item; the materials are not refunded.
 
 ## Credits
 
-- Icon: "Shield impact" by Delapouite from [game-icons.net](https://game-icons.net), licensed under
+- Mod icon: "Shield impact" by Delapouite from [game-icons.net](https://game-icons.net), licensed under
   [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Recoloured and outlined.
 
 ## Source and issues

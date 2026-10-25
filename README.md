@@ -27,7 +27,7 @@ The build touches nothing outside the repo. To test in game, install the zip wit
 | Path | Purpose |
 | --- | --- |
 | `src/` | Plugin source: the trinket, its status effect, the damage patches |
-| `assets/icon.png` | Item and status effect icon, embedded in the DLL |
+| `assets/icon.png` | Fallback item and status effect icon, embedded in the DLL; normally the vanilla icons are tinted at startup |
 | `tools/make_icons.ps1` | Generates `assets/icon.png` and `package/icon.png` from game-icons.net |
 | `package/` | Mod page README and icon shipped in the package |
 

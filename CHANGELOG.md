@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- The trinket is now called Spearbreaker, and its icon is the Heart of the Forest's in blue-grey tin.
+- The effects are renamed Gungnir's Aim (while worn) and Odin's Claim (full adrenaline), with icons
+  in the same tint.
+
 ## 0.1.1
 
 - Mod icon recoloured to blue-grey tin to match the charm.

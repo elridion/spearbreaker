@@ -52,12 +52,12 @@ namespace Spearbreaker
         {
             LocalizationManager.Instance.GetLocalization().AddTranslation("English", new Dictionary<string, string>
             {
-                { "item_trinket_spearbreaker", "Spearbreaker charm" },
+                { "item_trinket_spearbreaker", "Spearbreaker" },
                 { "item_trinket_spearbreaker_description", "A bronze shard of a split shield. Spears remember the hide they could not pierce." },
-                { "se_spearbreaker", "Spearbreaker surge" },
-                { "se_spearbreaker_start", "Your spear finds the gaps" },
+                { "se_spearbreaker", "Odin's Claim" },
+                { "se_spearbreaker_start", "Odin claims your foes" },
                 { "se_spearbreaker_tooltip", "Spear hits deal $1% more pierce damage for $2 s." },
-                { "se_spearbreaker_passive", "Spearbreaker" },
+                { "se_spearbreaker_passive", "Gungnir's Aim" },
                 { "se_spearbreaker_passive_tooltip", "Spear hits find the gaps: creatures that resist pierce take normal damage, others take pierce damage as if one step weaker to it." },
             });
         }

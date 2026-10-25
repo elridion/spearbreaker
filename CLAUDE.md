@@ -20,6 +20,10 @@ Sibling projects `../heraldry` and `../warden` use the same stack, build and rel
   clone of the vanilla Heart of the Forest, with its icon loaded from an embedded PNG. Its model is
   recoloured at startup (`SpearbreakerItem.Recolor`) on copies of the materials and a greyscaled copy
   of the texture; the vanilla materials stay untouched. Skipped on a dedicated server (no GPU).
+  The item and passive icons are the Heart of the Forest's icon, and the full-adrenaline icon is its
+  full-adrenaline effect's icon, each copied out of its atlas cell, greyed and multiplied by the same
+  tint (`SpearbreakerItem.Tinted`). Display names: item "Spearbreaker", passive "Gungnir's Aim",
+  active "Odin's Claim".
 
 ## Layout
 
@@ -30,7 +34,7 @@ Sibling projects `../heraldry` and `../warden` use the same stack, build and rel
 | `src/SE_SpearbreakerPassive.cs` | The equip effect: raises the bypass attribute bit while the charm is worn |
 | `src/SE_Spearbreaker.cs` | The full-adrenaline effect: pierce bonus (attacker side) |
 | `src/DamagePatches.cs` | Shifts the pierce modifier one step weaker in `Character.GetDamageModifiers` during `RPC_Damage` |
-| `assets/icon.png` | Item and status effect icon, embedded as `Spearbreaker.icon.png` |
+| `assets/icon.png` | Fallback icon, embedded as `Spearbreaker.icon.png`; used only when a vanilla icon is missing |
 | `tools/make_icons.ps1` | Generates `assets/icon.png` and `package/icon.png` from the game-icons.net archive |
 | `package/README.md`, `package/icon.png` | Mod page and icon shipped in the package |
 | `.github/workflows/build.yml` | CI: builds the package on push/PR, GitHub release and Hexium upload on `v*` tags |
