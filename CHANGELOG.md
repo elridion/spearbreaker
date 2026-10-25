@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Mod icon recoloured to blue-grey tin to match the charm.
+
 ## 0.1.0
 
 - First release: the Spearbreaker charm, a blue-grey tin Forge trinket (5 Bronze, 2 Troll trophies, 3 Rubies).
