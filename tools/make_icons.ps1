@@ -1,6 +1,7 @@
 # Builds the item icon (assets/icon.png, embedded in the DLL and used for the trinket and its status
 # effect) and the mod icon (package/icon.png, 256 x 256, Thunderstore/Hexium) from the game-icons.net
-# "shield-impact" icon by Delapouite (CC BY 3.0): a spear punching through a cracked shield.
+# "shield-impact" icon by Delapouite (CC BY 3.0): a spear punching through a cracked shield. The item
+# icon is bronze; the mod icon is blue-grey tin like the charm's model.
 #
 # The archive is the same one Heraldry uses; it is downloaded when missing.
 #
@@ -24,9 +25,9 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 Add-Type -ReferencedAssemblies System.Drawing -TypeDefinition @'
 using System; using System.Drawing; using System.Drawing.Drawing2D; using System.Drawing.Imaging;
 public static class IconPaint {
-    // Draws the white glyph as bronze: a vertical gradient through the glyph's alpha, over a dark
-    // outline grown from the same alpha, so it reads on the inventory's dark slots.
-    public static Bitmap Glyph(Bitmap src, int size, double fill, int outline) {
+    // Draws the white glyph as metal: a vertical gradient from top to bottom through the glyph's
+    // alpha, over a dark outline (edge) grown from the same alpha, so it reads on dark backgrounds.
+    public static Bitmap Glyph(Bitmap src, int size, double fill, int outline, Color top, Color bottom, Color edge) {
         var dst = new Bitmap(size, size, PixelFormat.Format32bppArgb);
         int inner = (int)Math.Round(size * fill);
         int off = (size - inner) / 2;
@@ -43,7 +44,6 @@ public static class IconPaint {
                 a[y * size + x] = mask.GetPixel(x, y).A;
         mask.Dispose();
 
-        Color top = Color.FromArgb(244, 200, 120), bottom = Color.FromArgb(160, 96, 40), edge = Color.FromArgb(34, 22, 12);
         for (int y = 0; y < size; y++) {
             double t = (double)y / (size - 1);
             for (int x = 0; x < size; x++) {
@@ -66,7 +66,8 @@ public static class IconPaint {
         return dst;
     }
 
-    // The mod icon: the glyph on a dark round plate with a bronze rim.
+    // The mod icon: the glyph on a dark slate round plate with a tin rim, matching the charm's
+    // blue-grey tin. Heraldry and Warden use the same plate in their own colours.
     public static Bitmap ModIcon(Bitmap glyph, int size) {
         var dst = new Bitmap(size, size, PixelFormat.Format32bppArgb);
         using (var g = Graphics.FromImage(dst)) {
@@ -76,9 +77,9 @@ public static class IconPaint {
             g.PixelOffsetMode = PixelOffsetMode.HighQuality;
             using (var path = new GraphicsPath()) {
                 path.AddEllipse(6, 6, size - 12, size - 12);
-                using (var plate = new PathGradientBrush(path) { CenterColor = Color.FromArgb(255, 58, 44, 34), SurroundColors = new[] { Color.FromArgb(255, 24, 18, 14) } })
+                using (var plate = new PathGradientBrush(path) { CenterColor = Color.FromArgb(255, 54, 62, 72), SurroundColors = new[] { Color.FromArgb(255, 20, 24, 30) } })
                     g.FillPath(plate, path);
-                using (var rim = new Pen(Color.FromArgb(255, 176, 112, 52), 7f))
+                using (var rim = new Pen(Color.FromArgb(255, 138, 156, 174), 7f))
                     g.DrawEllipse(rim, 9.5f, 9.5f, size - 19, size - 19);
             }
             g.DrawImage(glyph, new Rectangle(0, 0, size, size));
@@ -98,10 +99,12 @@ try {
     $zip.Dispose()
 }
 
-$item = [IconPaint]::Glyph($src, 128, 0.84, 4)
+$item = [IconPaint]::Glyph($src, 128, 0.84, 4,
+    [System.Drawing.Color]::FromArgb(244, 200, 120), [System.Drawing.Color]::FromArgb(160, 96, 40), [System.Drawing.Color]::FromArgb(34, 22, 12))
 $item.Save((Join-Path (Get-Location) 'assets/icon.png'), [System.Drawing.Imaging.ImageFormat]::Png)
 
-$glyph = [IconPaint]::Glyph($src, 256, 0.62, 6)
+$glyph = [IconPaint]::Glyph($src, 256, 0.62, 6,
+    [System.Drawing.Color]::FromArgb(214, 226, 236), [System.Drawing.Color]::FromArgb(112, 132, 152), [System.Drawing.Color]::FromArgb(16, 20, 26))
 $mod = [IconPaint]::ModIcon($glyph, 256)
 $mod.Save((Join-Path (Get-Location) 'package/icon.png'), [System.Drawing.Imaging.ImageFormat]::Png)
 
