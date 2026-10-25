@@ -14,7 +14,7 @@ namespace Spearbreaker
     {
         public const string PluginGuid = "elridion.spearbreaker";
         public const string PluginName = "Spearbreaker";
-        public const string PluginVersion = "0.1.1";
+        public const string PluginVersion = "0.1.2";
 
         public static ConfigEntry<float> Duration;
         public static ConfigEntry<float> AdrenalineToFill;

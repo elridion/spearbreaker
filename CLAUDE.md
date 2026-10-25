@@ -17,7 +17,7 @@ Sibling projects `../heraldry` and `../warden` use the same stack, build and rel
   `Valheim_Data/Managed/publicized_assemblies`; Valheim is located through the Steam registry entry
   (override with `-p:VALHEIM_INSTALL="<path>"`).
 - Harmony (via BepInEx) for patches. No Unity project and no asset bundles: the item is a Jotunn
-  clone of the vanilla Heart of the Forest, with its icon loaded from an embedded PNG. Its model is
+  clone of the vanilla Heart of the Forest. Its model is
   recoloured at startup (`SpearbreakerItem.Recolor`) on copies of the materials and a greyscaled copy
   of the texture; the vanilla materials stay untouched. Skipped on a dedicated server (no GPU).
   The item and passive icons are the Heart of the Forest's icon, and the full-adrenaline icon is its
