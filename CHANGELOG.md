@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3
+
+- Bug reports and feedback now go to the #spearbreaker channel on Discord: https://discord.gg/fBtGdJ6YSs
+- Players on 0.1.x can still play together.
+
 ## 0.1.2
 
 - The trinket is now called Spearbreaker, and its icon is the Heart of the Forest's in blue-grey tin.
