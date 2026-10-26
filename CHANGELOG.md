@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- The trinket and its effects are translated into every language Valheim offers except Abenaki, and
+  follow the game's language setting.
+- Players on 0.1.x can still play together.
+
 ## 0.1.3
 
 - Bug reports and feedback now go to the #spearbreaker channel on Discord: https://discord.gg/fBtGdJ6YSs

@@ -1,0 +1,9 @@
+{
+  "item_trinket_spearbreaker": "Rompelanzas",
+  "item_trinket_spearbreaker_description": "Un fragmento de bronce de un escudo partido. Las lanzas recuerdan la piel que no pudieron perforar.",
+  "se_spearbreaker": "Reclamo de Odín",
+  "se_spearbreaker_start": "Odín reclama a tus enemigos",
+  "se_spearbreaker_tooltip": "Los golpes de lanza infligen un $1% más de daño perforante durante $2 s.",
+  "se_spearbreaker_passive": "Puntería de Gungnir",
+  "se_spearbreaker_passive_tooltip": "Los golpes de lanza encuentran los huecos: las criaturas resistentes al daño perforante reciben daño normal; las demás reciben daño perforante como si fueran un grado más débiles a él."
+}

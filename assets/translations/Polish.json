@@ -1,0 +1,9 @@
+{
+  "item_trinket_spearbreaker": "Łamacz włóczni",
+  "item_trinket_spearbreaker_description": "Brązowy odłamek rozłupanej tarczy. Włócznie pamiętają skórę, której nie zdołały przebić.",
+  "se_spearbreaker": "Roszczenie Odyna",
+  "se_spearbreaker_start": "Odyn rości sobie prawo do twoich wrogów",
+  "se_spearbreaker_tooltip": "Trafienia włócznią zadają przez $2 s o $1% więcej obrażeń od przebicia.",
+  "se_spearbreaker_passive": "Celność Gungnira",
+  "se_spearbreaker_passive_tooltip": "Trafienia włócznią znajdują luki: stworzenia odporne na przebicie otrzymują normalne obrażenia, pozostałe otrzymują obrażenia od przebicia, jakby były o stopień bardziej na nie podatne."
+}

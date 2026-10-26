@@ -1,0 +1,9 @@
+{
+  "item_trinket_spearbreaker": "Lamač kopí",
+  "item_trinket_spearbreaker_description": "Bronzový střep rozštípnutého štítu. Kopí si pamatují kůži, kterou nedokázala probodnout.",
+  "se_spearbreaker": "Ódinův nárok",
+  "se_spearbreaker_start": "Ódin si činí nárok na tvé nepřátele",
+  "se_spearbreaker_tooltip": "Zásahy kopím způsobují po dobu $2 s o $1 % více bodného poškození.",
+  "se_spearbreaker_passive": "Gungnirovo míření",
+  "se_spearbreaker_passive_tooltip": "Zásahy kopím nacházejí mezery: tvorové odolní vůči bodnému poškození utrpí normální poškození, ostatní utrpí bodné poškození, jako by vůči němu byli o stupeň zranitelnější."
+}

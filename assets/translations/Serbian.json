@@ -1,0 +1,9 @@
+{
+  "item_trinket_spearbreaker": "Lomitelj kopalja",
+  "item_trinket_spearbreaker_description": "Bronzana krhotina rascepljenog štita. Koplja pamte kožu koju nisu mogla da probiju.",
+  "se_spearbreaker": "Odinovo pravo",
+  "se_spearbreaker_start": "Odin polaže pravo na tvoje neprijatelje",
+  "se_spearbreaker_tooltip": "Pogoci kopljem nanose $1% više probodne štete tokom $2 s.",
+  "se_spearbreaker_passive": "Gungnirov nišan",
+  "se_spearbreaker_passive_tooltip": "Pogoci kopljem pronalaze pukotine: stvorenja otporna na probadanje primaju normalnu štetu, a ostala primaju probodnu štetu kao da su za stepen slabija prema njoj."
+}

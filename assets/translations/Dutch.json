@@ -1,0 +1,9 @@
+{
+  "item_trinket_spearbreaker": "Speerbreker",
+  "item_trinket_spearbreaker_description": "Een bronzen scherf van een gespleten schild. Speren onthouden de huid die ze niet konden doorboren.",
+  "se_spearbreaker": "Odins aanspraak",
+  "se_spearbreaker_start": "Odin eist je vijanden op",
+  "se_spearbreaker_tooltip": "Speertreffers doen $2 s lang $1% meer doorboringsschade.",
+  "se_spearbreaker_passive": "Gungnirs vizier",
+  "se_spearbreaker_passive_tooltip": "Speertreffers vinden de kieren: wezens die bestand zijn tegen doorboring krijgen normale schade, andere krijgen doorboringsschade alsof ze er één stap zwakker tegen zijn."
+}

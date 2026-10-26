@@ -37,6 +37,12 @@ Forge: 5 Bronze, 2 Troll trophies, 3 Rubies.
 | `AdrenalineToFill` | 50 | Adrenaline needed to fire the active effect (vanilla Heart of the Forest: 50) |
 | `PierceBonus` | 1 | Extra pierce damage on spear hits while the active effect lasts (1 = +100%) |
 
+## Languages
+
+The trinket and its effects follow the game's language setting, in every language Valheim offers
+except Abenaki, which shows English. The translations have not been checked by native speakers yet;
+corrections are welcome on GitHub (see below).
+
 ## Requirements
 
 - BepInEx for Valheim

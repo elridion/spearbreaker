@@ -31,6 +31,12 @@
     <EmbeddedResource Include="assets\icon.png" LogicalName="Spearbreaker.icon.png" />
   </ItemGroup>
 
+  <!-- Player-facing text, one Jotunn JSON file per Valheim language, loaded by
+       SpearbreakerPlugin.AddLocalizations as Spearbreaker.translations.<Language>.json. -->
+  <ItemGroup>
+    <EmbeddedResource Include="assets\translations\*.json" LogicalName="Spearbreaker.translations.%(Filename)%(Extension)" />
+  </ItemGroup>
+
   <!-- Thunderstore/Hexium package: dotnet build -c Release -t:Package -->
   <PropertyGroup>
     <PackageDescription>A bronze trinket that lets spears punch through pierce resistance.</PackageDescription>

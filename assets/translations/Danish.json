@@ -1,0 +1,9 @@
+{
+  "item_trinket_spearbreaker": "Spydbryder",
+  "item_trinket_spearbreaker_description": "Et bronzestykke af et kløvet skjold. Spyd husker den hud, de ikke kunne gennembore.",
+  "se_spearbreaker": "Odins krav",
+  "se_spearbreaker_start": "Odin gør krav på dine fjender",
+  "se_spearbreaker_tooltip": "Spydhug giver $1 % mere stikskade i $2 s.",
+  "se_spearbreaker_passive": "Gungners sigte",
+  "se_spearbreaker_passive_tooltip": "Spydhug finder sprækkerne: væsner, der modstår stik, tager normal skade, andre tager stikskade, som om de var ét trin svagere over for det."
+}

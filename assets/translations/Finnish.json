@@ -1,0 +1,9 @@
+{
+  "item_trinket_spearbreaker": "Keihäänmurtaja",
+  "item_trinket_spearbreaker_description": "Pronssinen siru haljenneesta kilvestä. Keihäät muistavat nahan, jota eivät pystyneet lävistämään.",
+  "se_spearbreaker": "Odinin vaatimus",
+  "se_spearbreaker_start": "Odin vaatii vihollisesi",
+  "se_spearbreaker_tooltip": "Keihäsosumat tekevät $1 % enemmän lävistysvahinkoa $2 s ajan.",
+  "se_spearbreaker_passive": "Gungnirin tähtäys",
+  "se_spearbreaker_passive_tooltip": "Keihäsosumat löytävät raot: lävistystä kestävät olennot ottavat normaalia vahinkoa, muut ottavat lävistysvahinkoa kuin olisivat askelen heikompia sille."
+}

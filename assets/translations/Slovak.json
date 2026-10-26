@@ -1,0 +1,9 @@
+{
+  "item_trinket_spearbreaker": "Lámač kopijí",
+  "item_trinket_spearbreaker_description": "Bronzový črep rozštiepeného štítu. Kopije si pamätajú kožu, ktorú nedokázali prebodnúť.",
+  "se_spearbreaker": "Ódinov nárok",
+  "se_spearbreaker_start": "Ódin si nárokuje tvojich nepriateľov",
+  "se_spearbreaker_tooltip": "Zásahy kopijou spôsobujú počas $2 s o $1 % viac prienikového poškodenia.",
+  "se_spearbreaker_passive": "Gungnirovo mierenie",
+  "se_spearbreaker_passive_tooltip": "Zásahy kopijou nachádzajú medzery: tvory odolné voči prieniku utrpia normálne poškodenie, ostatné utrpia prienikové poškodenie, akoby voči nemu boli o stupeň zraniteľnejšie."
+}

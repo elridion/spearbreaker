@@ -1,0 +1,9 @@
+{
+  "item_trinket_spearbreaker": "Spjótbrjótur",
+  "item_trinket_spearbreaker_description": "Bronsbrot úr klofnum skildi. Spjót muna húðina sem þau gátu ekki stungið í gegnum.",
+  "se_spearbreaker": "Tilkall Óðins",
+  "se_spearbreaker_start": "Óðinn gerir tilkall til óvina þinna",
+  "se_spearbreaker_tooltip": "Spjóthögg valda $1% meiri stunguskaða í $2 sek.",
+  "se_spearbreaker_passive": "Mið Gungnis",
+  "se_spearbreaker_passive_tooltip": "Spjóthögg finna glufurnar: verur sem standast stungu fá venjulegan skaða, aðrar fá stunguskaða eins og þær væru einu stigi veikari fyrir henni."
+}

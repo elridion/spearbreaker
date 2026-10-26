@@ -1,0 +1,9 @@
+{
+  "item_trinket_spearbreaker": "Speerbrecher",
+  "item_trinket_spearbreaker_description": "Ein Bronzesplitter eines gespaltenen Schildes. Speere erinnern sich an die Haut, die sie nicht durchstechen konnten.",
+  "se_spearbreaker": "Odins Anspruch",
+  "se_spearbreaker_start": "Odin beansprucht deine Feinde",
+  "se_spearbreaker_tooltip": "Speertreffer verursachen $2 s lang $1 % mehr Stichschaden.",
+  "se_spearbreaker_passive": "Gungnirs Ziel",
+  "se_spearbreaker_passive_tooltip": "Speertreffer finden die Lücken: Kreaturen, die gegen Stechen resistent sind, erleiden normalen Schaden, alle anderen erleiden Stichschaden, als wären sie eine Stufe anfälliger dafür."
+}

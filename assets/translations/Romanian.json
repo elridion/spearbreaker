@@ -1,0 +1,9 @@
+{
+  "item_trinket_spearbreaker": "Frângător de sulițe",
+  "item_trinket_spearbreaker_description": "Un ciob de bronz dintr-un scut despicat. Sulițele își amintesc pielea pe care n-au putut-o străpunge.",
+  "se_spearbreaker": "Pretenția lui Odin",
+  "se_spearbreaker_start": "Odin îți revendică dușmanii",
+  "se_spearbreaker_tooltip": "Loviturile cu sulița provoacă cu $1% mai multe daune de străpungere timp de $2 s.",
+  "se_spearbreaker_passive": "Ținta lui Gungnir",
+  "se_spearbreaker_passive_tooltip": "Loviturile cu sulița găsesc breșele: făpturile rezistente la străpungere primesc daune normale, celelalte primesc daune de străpungere ca și cum ar fi cu o treaptă mai vulnerabile la ele."
+}

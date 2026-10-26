@@ -1,0 +1,9 @@
+{
+  "item_trinket_spearbreaker": "Spjutbrytare",
+  "item_trinket_spearbreaker_description": "Ett bronsfragment av en kluven sköld. Spjut minns huden de inte kunde genomborra.",
+  "se_spearbreaker": "Odens anspråk",
+  "se_spearbreaker_start": "Oden gör anspråk på dina fiender",
+  "se_spearbreaker_tooltip": "Spjutträffar gör $1 % mer stickskada i $2 s.",
+  "se_spearbreaker_passive": "Gungners sikte",
+  "se_spearbreaker_passive_tooltip": "Spjutträffar hittar luckorna: varelser som står emot stick tar normal skada, andra tar stickskada som om de vore ett steg svagare mot det."
+}

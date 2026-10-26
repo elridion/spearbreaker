@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System.IO;
 using BepInEx;
 using BepInEx.Configuration;
 using HarmonyLib;
@@ -15,6 +15,8 @@ namespace Spearbreaker
         public const string PluginGuid = "elridion.spearbreaker";
         public const string PluginName = "Spearbreaker";
         public const string PluginVersion = "0.1.3";
+
+        private const string TranslationPrefix = "Spearbreaker.translations.";
 
         public static ConfigEntry<float> Duration;
         public static ConfigEntry<float> AdrenalineToFill;
@@ -48,18 +50,19 @@ namespace Spearbreaker
             _harmony?.UnpatchSelf();
         }
 
+        // Each embedded assets/translations/<Language>.json is named after a Valheim language. Jotunn
+        // falls back to English for languages and keys without a translation.
         private static void AddLocalizations()
         {
-            LocalizationManager.Instance.GetLocalization().AddTranslation("English", new Dictionary<string, string>
+            var localization = LocalizationManager.Instance.GetLocalization();
+            var assembly = typeof(SpearbreakerPlugin).Assembly;
+            foreach (string resource in assembly.GetManifestResourceNames())
             {
-                { "item_trinket_spearbreaker", "Spearbreaker" },
-                { "item_trinket_spearbreaker_description", "A bronze shard of a split shield. Spears remember the hide they could not pierce." },
-                { "se_spearbreaker", "Odin's Claim" },
-                { "se_spearbreaker_start", "Odin claims your foes" },
-                { "se_spearbreaker_tooltip", "Spear hits deal $1% more pierce damage for $2 s." },
-                { "se_spearbreaker_passive", "Gungnir's Aim" },
-                { "se_spearbreaker_passive_tooltip", "Spear hits find the gaps: creatures that resist pierce take normal damage, others take pierce damage as if one step weaker to it." },
-            });
+                if (!resource.StartsWith(TranslationPrefix) || !resource.EndsWith(".json")) continue;
+                string language = resource.Substring(TranslationPrefix.Length, resource.Length - TranslationPrefix.Length - ".json".Length);
+                using (var reader = new StreamReader(assembly.GetManifestResourceStream(resource)))
+                    localization.AddJsonFile(language, reader.ReadToEnd());
+            }
         }
     }
 }

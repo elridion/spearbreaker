@@ -1,0 +1,9 @@
+{
+  "item_trinket_spearbreaker": "スピアブレイカー",
+  "item_trinket_spearbreaker_description": "割れた盾の青銅の欠片。槍は貫けなかった皮を覚えている。",
+  "se_spearbreaker": "オーディンの宣告",
+  "se_spearbreaker_start": "オーディンが敵を我が物とする",
+  "se_spearbreaker_tooltip": "槍の命中時、$2秒間刺しダメージが$1%増加する。",
+  "se_spearbreaker_passive": "グングニルの狙い",
+  "se_spearbreaker_passive_tooltip": "槍の一撃は隙を突く：刺しに耐性を持つ生き物は通常のダメージを受け、その他は刺しに一段階弱いかのように刺しダメージを受ける。"
+}
