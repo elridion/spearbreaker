@@ -62,6 +62,6 @@ since the game no longer knows the item; the materials are not refunded.
 
 ## Source and issues
 
-Bug reports and feedback: the [#spearbreaker channel on Discord](https://discord.gg/fBtGdJ6YSs).
+Bug reports and feedback: the [#spearbreaker channel on Discord](https://discord.gg/wqUA7vvvp2).
 
 Source code (MIT license): [github.com/elridion/spearbreaker](https://github.com/elridion/spearbreaker).

@@ -40,7 +40,7 @@
   <!-- Thunderstore/Hexium package: dotnet build -c Release -t:Package -->
   <PropertyGroup>
     <PackageDescription>A bronze trinket that lets spears punch through pierce resistance.</PackageDescription>
-    <PackageWebsite>https://discord.gg/fBtGdJ6YSs</PackageWebsite>
+    <PackageWebsite>https://discord.gg/wqUA7vvvp2</PackageWebsite>
     <PackageDependencies>"ValheimModding-Jotunn-2.30.2"</PackageDependencies>
     <PackageStagingDir>$(BaseIntermediateOutputPath)package\</PackageStagingDir>
     <PackageOutputDir>$(MSBuildProjectDirectory)\dist\</PackageOutputDir>

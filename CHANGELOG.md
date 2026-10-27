@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- The Discord link now points at the shared server, where #spearbreaker lives: https://discord.gg/wqUA7vvvp2
+
 ## 0.1.4
 
 - The trinket and its effects are translated into every language Valheim offers except Abenaki, and
