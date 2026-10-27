@@ -59,9 +59,3 @@ since the game no longer knows the item; the materials are not refunded.
 
 - Mod icon: "Shield impact" by Delapouite from [game-icons.net](https://game-icons.net), licensed under
   [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Recoloured and outlined.
-
-## Source and issues
-
-Bug reports and feedback: the [#spearbreaker channel on Discord](https://discord.gg/wqUA7vvvp2).
-
-Source code (MIT license): [github.com/elridion/spearbreaker](https://github.com/elridion/spearbreaker).
