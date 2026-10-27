@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.4
 
 - The trinket and its effects are translated into every language Valheim offers except Abenaki, and
   follow the game's language setting.
