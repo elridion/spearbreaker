@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.5
+
+- Players on 0.1.x can still play together.
+
 ## 0.1.4
 
 - The trinket and its effects are translated into every language Valheim offers except Abenaki, and
