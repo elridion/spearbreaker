@@ -1,6 +1,6 @@
 {
   "item_trinket_spearbreaker": "Spearbreaker",
-  "item_trinket_spearbreaker_description": "A bronze shard of a split shield. Spears remember the hide they could not pierce.",
+  "item_trinket_spearbreaker_description": "An iron shard of a split shield. Spears remember the hide they could not pierce.",
   "se_spearbreaker": "Odin's Claim",
   "se_spearbreaker_start": "Odin claims your foes",
   "se_spearbreaker_tooltip": "Spear hits deal $1% more pierce damage for $2 s.",

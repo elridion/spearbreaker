@@ -16,7 +16,7 @@ namespace Spearbreaker
     internal static class SpearbreakerItem
     {
         public const string PrefabName = "TrinketSpearbreaker";
-        // Vanilla Heart of the Forest: a Forge trinket of the same tier, so the copy looks and equips like one.
+        // Vanilla Heart of the Forest, the charm's model and icons; its recipe is replaced by a Swamp one.
         private const string BasePrefab = "TrinketBronzeHealth";
         private const string IconResource = "Spearbreaker.icon.png";
         // Blue-grey tin. The base texture is turned grey first, so the tint replaces the bronze instead of
@@ -58,11 +58,12 @@ namespace Spearbreaker
                 Description = "$item_trinket_spearbreaker_description",
                 CraftingStation = CraftingStations.Forge,
                 MinStationLevel = 1,
+                // Swamp tier, like the vanilla Iron Brooch.
                 Requirements = new[]
                 {
-                    new RequirementConfig("Bronze", 5),
-                    new RequirementConfig("TrophyFrostTroll", 2),
-                    new RequirementConfig("Ruby", 3),
+                    new RequirementConfig("Iron", 5),
+                    new RequirementConfig("Guck", 5),
+                    new RequirementConfig("TrophyAbomination", 1),
                 },
             };
             if (icon) config.Icons = new[] { icon };

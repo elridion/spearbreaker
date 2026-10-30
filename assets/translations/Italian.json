@@ -1,6 +1,6 @@
 {
   "item_trinket_spearbreaker": "Spezzalance",
-  "item_trinket_spearbreaker_description": "Una scheggia di bronzo di uno scudo spaccato. Le lance ricordano le pelli che non riuscirono a trafiggere.",
+  "item_trinket_spearbreaker_description": "Una scheggia di ferro di uno scudo spaccato. Le lance ricordano le pelli che non riuscirono a trafiggere.",
   "se_spearbreaker": "Pretesa di Odino",
   "se_spearbreaker_start": "Odino reclama i tuoi nemici",
   "se_spearbreaker_tooltip": "I colpi di lancia infliggono il $1% di danni da perforazione in più per $2 s.",

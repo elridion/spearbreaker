@@ -1,6 +1,6 @@
 {
   "item_trinket_spearbreaker": "Копьелом",
-  "item_trinket_spearbreaker_description": "Бронзовый осколок расколотого щита. Копья помнят шкуру, которую не смогли пробить.",
+  "item_trinket_spearbreaker_description": "Железный осколок расколотого щита. Копья помнят шкуру, которую не смогли пробить.",
   "se_spearbreaker": "Притязание Одина",
   "se_spearbreaker_start": "Один забирает твоих врагов",
   "se_spearbreaker_tooltip": "Удары копьём наносят на $1% больше колющего урона в течение $2 с.",

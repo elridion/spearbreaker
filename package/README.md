@@ -25,7 +25,7 @@ as hard. Bow get nothing. Spear happy.
 
 ## Recipe
 
-Forge: 5 Bronze, 2 Troll trophies, 3 Rubies.
+Forge: 5 Iron, 5 Guck, 1 Abomination trophy.
 
 ## Configuration
 

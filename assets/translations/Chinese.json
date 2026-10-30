@@ -1,6 +1,6 @@
 {
   "item_trinket_spearbreaker": "破矛者",
-  "item_trinket_spearbreaker_description": "一面裂盾的青铜碎片。长矛记得那些它们未能刺穿的兽皮。",
+  "item_trinket_spearbreaker_description": "一面裂盾的铁质碎片。长矛记得那些它们未能刺穿的兽皮。",
   "se_spearbreaker": "奥丁之征",
   "se_spearbreaker_start": "奥丁征讨你的敌人",
   "se_spearbreaker_tooltip": "长矛命中造成的戳刺伤害提高 $1%，持续 $2 秒。",

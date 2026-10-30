@@ -1,6 +1,6 @@
 {
   "item_trinket_spearbreaker": "Списолам",
-  "item_trinket_spearbreaker_description": "Бронзовий уламок розколотого щита. Списи пам’ятають шкуру, яку не змогли пробити.",
+  "item_trinket_spearbreaker_description": "Залізний уламок розколотого щита. Списи пам’ятають шкуру, яку не змогли пробити.",
   "se_spearbreaker": "Право Одіна",
   "se_spearbreaker_start": "Одін забирає твоїх ворогів",
   "se_spearbreaker_tooltip": "Удари списом завдають на $1% більше проколювальної шкоди протягом $2 с.",

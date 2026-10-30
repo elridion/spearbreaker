@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0
+
+- The trinket is now a Swamp-tier craft: 5 Iron, 5 Guck and 1 Abomination trophy at the Forge.
+  Charms you already crafted keep working.
+- Players on 0.1.x and 0.2.x cannot play together; everyone needs 0.2.0.
+
 ## 0.1.5
 
 - Players on 0.1.x can still play together.

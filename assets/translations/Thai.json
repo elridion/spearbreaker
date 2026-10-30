@@ -1,6 +1,6 @@
 {
   "item_trinket_spearbreaker": "ผู้หักหอก",
-  "item_trinket_spearbreaker_description": "เศษสัมฤทธิ์จากโล่ที่แตกออก หอกจดจำหนังที่มันแทงไม่ทะลุ",
+  "item_trinket_spearbreaker_description": "เศษเหล็กจากโล่ที่แตกออก หอกจดจำหนังที่มันแทงไม่ทะลุ",
   "se_spearbreaker": "การอ้างสิทธิ์ของโอดิน",
   "se_spearbreaker_start": "โอดินอ้างสิทธิ์เหนือศัตรูของเจ้า",
   "se_spearbreaker_tooltip": "การโจมตีด้วยหอกสร้างความเสียหายแบบแทงเพิ่มขึ้น $1% เป็นเวลา $2 วินาที",

@@ -1,6 +1,6 @@
 {
   "item_trinket_spearbreaker": "Mızrakkıran",
-  "item_trinket_spearbreaker_description": "Yarılmış bir kalkanın tunç parçası. Mızraklar delemedikleri postu hatırlar.",
+  "item_trinket_spearbreaker_description": "Yarılmış bir kalkanın demir parçası. Mızraklar delemedikleri postu hatırlar.",
   "se_spearbreaker": "Odin'in Hakkı",
   "se_spearbreaker_start": "Odin düşmanlarını sahipleniyor",
   "se_spearbreaker_tooltip": "Mızrak darbeleri $2 sn boyunca %$1 daha fazla delme hasarı verir.",
