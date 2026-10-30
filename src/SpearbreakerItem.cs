@@ -16,6 +16,9 @@ namespace Spearbreaker
     internal static class SpearbreakerItem
     {
         public const string PrefabName = "TrinketSpearbreaker";
+        // The upgrade that unlocks the thrown spear recall. Vanilla wants a Forge one level above the
+        // recipe's for each quality step, so quality 2 needs Forge level 2.
+        public const int RecallQuality = 2;
         // Vanilla Heart of the Forest, the charm's model and icons; its recipe is replaced by a Swamp one.
         private const string BasePrefab = "TrinketBronzeHealth";
         private const string IconResource = "Spearbreaker.icon.png";
@@ -58,12 +61,14 @@ namespace Spearbreaker
                 Description = "$item_trinket_spearbreaker_description",
                 CraftingStation = CraftingStations.Forge,
                 MinStationLevel = 1,
-                // Swamp tier, like the vanilla Iron Brooch.
+                // Swamp tier, like the vanilla Iron Brooch. The upgrade costs only a Dragon Egg, which
+                // can't go through a portal, so it has to be carried to the Forge on foot.
                 Requirements = new[]
                 {
                     new RequirementConfig("Iron", 5),
                     new RequirementConfig("Guck", 5),
                     new RequirementConfig("TrophyAbomination", 1),
+                    new RequirementConfig("DragonEgg", 0, 1),
                 },
             };
             if (icon) config.Icons = new[] { icon };
@@ -76,6 +81,7 @@ namespace Spearbreaker
             }
             Recolor(item.ItemPrefab);
             s_shared = item.ItemDrop.m_itemData.m_shared;
+            s_shared.m_maxQuality = RecallQuality;
             // Replaces any equip effect inherited from the Heart of the Forest.
             s_shared.m_equipStatusEffect = passive;
             s_shared.m_fullAdrenalineSE = effect;

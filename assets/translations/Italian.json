@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "Odino reclama i tuoi nemici",
   "se_spearbreaker_tooltip": "I colpi di lancia infliggono il $1% di danni da perforazione in più per $2 s.",
   "se_spearbreaker_passive": "Mira di Gungnir",
-  "se_spearbreaker_passive_tooltip": "I colpi di lancia trovano i varchi: le creature resistenti alla perforazione subiscono danni normali, le altre subiscono danni da perforazione come se fossero un grado più vulnerabili."
+  "se_spearbreaker_passive_tooltip": "I colpi di lancia trovano i varchi: le creature resistenti alla perforazione subiscono danni normali, le altre subiscono danni da perforazione come se fossero un grado più vulnerabili. Dopo il miglioramento, le lance scagliate tornano da te non appena atterrano."
 }

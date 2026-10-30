@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "Odin beansprucht deine Feinde",
   "se_spearbreaker_tooltip": "Speertreffer verursachen $2 s lang $1 % mehr Stichschaden.",
   "se_spearbreaker_passive": "Gungnirs Ziel",
-  "se_spearbreaker_passive_tooltip": "Speertreffer finden die Lücken: Kreaturen, die gegen Stechen resistent sind, erleiden normalen Schaden, alle anderen erleiden Stichschaden, als wären sie eine Stufe anfälliger dafür."
+  "se_spearbreaker_passive_tooltip": "Speertreffer finden die Lücken: Kreaturen, die gegen Stechen resistent sind, erleiden normalen Schaden, alle anderen erleiden Stichschaden, als wären sie eine Stufe anfälliger dafür. Nach der Verbesserung kehren geworfene Speere zu dir zurück, sobald sie landen."
 }

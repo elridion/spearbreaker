@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "Odin îți revendică dușmanii",
   "se_spearbreaker_tooltip": "Loviturile cu sulița provoacă cu $1% mai multe daune de străpungere timp de $2 s.",
   "se_spearbreaker_passive": "Ținta lui Gungnir",
-  "se_spearbreaker_passive_tooltip": "Loviturile cu sulița găsesc breșele: făpturile rezistente la străpungere primesc daune normale, celelalte primesc daune de străpungere ca și cum ar fi cu o treaptă mai vulnerabile la ele."
+  "se_spearbreaker_passive_tooltip": "Loviturile cu sulița găsesc breșele: făpturile rezistente la străpungere primesc daune normale, celelalte primesc daune de străpungere ca și cum ar fi cu o treaptă mai vulnerabile la ele. După îmbunătățire, sulițele aruncate se întorc la tine imediat ce aterizează."
 }

@@ -18,6 +18,9 @@ as hard. Bow get nothing. Spear happy.
   - Creatures with no pierce modifier take pierce damage as if weak to it.
   - Creatures slightly weak to pierce become weak; weak becomes very weak.
   - Creatures immune to pierce stay immune.
+  - **Upgraded charm:** a moment after a spear you throw lands, it vanishes in Odin's smoke and
+    returns to you in a blue sparkle, into the inventory slot it was thrown from and back into your
+    hand if it is still empty. With a full inventory the spear stays where it landed.
 - **Odin's Claim (30 s):** fighting fills the trinket's adrenaline bar; when it is full, your spear hits deal
   100% more pierce damage, on top of the passive.
 - Works for melee spear attacks and thrown spears. Bows, crossbows and atgeirs are unchanged.
@@ -25,7 +28,12 @@ as hard. Bow get nothing. Spear happy.
 
 ## Recipe
 
-Forge: 5 Iron, 5 Guck, 1 Abomination trophy.
+| Quality | Station | Cost |
+| --- | --- | --- |
+| 1 | Forge level 1 | 5 Iron, 5 Guck, 1 Abomination trophy |
+| 2 (upgrade, thrown spear recall) | Forge level 2 | 1 Dragon Egg |
+
+Dragon Eggs can't go through portals, so the upgrade means carrying one to your Forge.
 
 ## Configuration
 

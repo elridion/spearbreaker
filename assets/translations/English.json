@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "Odin claims your foes",
   "se_spearbreaker_tooltip": "Spear hits deal $1% more pierce damage for $2 s.",
   "se_spearbreaker_passive": "Gungnir's Aim",
-  "se_spearbreaker_passive_tooltip": "Spear hits find the gaps: creatures that resist pierce take normal damage, others take pierce damage as if one step weaker to it."
+  "se_spearbreaker_passive_tooltip": "Spear hits find the gaps: creatures that resist pierce take normal damage, others take pierce damage as if one step weaker to it. Once upgraded, thrown spears return to you as soon as they land."
 }

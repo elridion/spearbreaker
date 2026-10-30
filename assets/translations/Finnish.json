@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "Odin vaatii vihollisesi",
   "se_spearbreaker_tooltip": "Keihäsosumat tekevät $1 % enemmän lävistysvahinkoa $2 s ajan.",
   "se_spearbreaker_passive": "Gungnirin tähtäys",
-  "se_spearbreaker_passive_tooltip": "Keihäsosumat löytävät raot: lävistystä kestävät olennot ottavat normaalia vahinkoa, muut ottavat lävistysvahinkoa kuin olisivat askelen heikompia sille."
+  "se_spearbreaker_passive_tooltip": "Keihäsosumat löytävät raot: lävistystä kestävät olennot ottavat normaalia vahinkoa, muut ottavat lävistysvahinkoa kuin olisivat askelen heikompia sille. Parannettuna heitetyt keihäät palaavat luoksesi heti, kun ne osuvat maahan."
 }

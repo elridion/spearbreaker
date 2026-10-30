@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "Odin réclame vos ennemis",
   "se_spearbreaker_tooltip": "Les coups de lance infligent $1 % de dégâts perforants en plus pendant $2 s.",
   "se_spearbreaker_passive": "Visée de Gungnir",
-  "se_spearbreaker_passive_tooltip": "Les coups de lance trouvent les failles : les créatures résistantes aux dégâts perforants subissent des dégâts normaux, les autres subissent des dégâts perforants comme si elles y étaient d'un cran plus vulnérables."
+  "se_spearbreaker_passive_tooltip": "Les coups de lance trouvent les failles : les créatures résistantes aux dégâts perforants subissent des dégâts normaux, les autres subissent des dégâts perforants comme si elles y étaient d'un cran plus vulnérables. Après amélioration, les lances lancées vous reviennent dès qu'elles atterrissent."
 }

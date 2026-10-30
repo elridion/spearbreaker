@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "Odin eist je vijanden op",
   "se_spearbreaker_tooltip": "Speertreffers doen $2 s lang $1% meer doorboringsschade.",
   "se_spearbreaker_passive": "Gungnirs vizier",
-  "se_spearbreaker_passive_tooltip": "Speertreffers vinden de kieren: wezens die bestand zijn tegen doorboring krijgen normale schade, andere krijgen doorboringsschade alsof ze er één stap zwakker tegen zijn."
+  "se_spearbreaker_passive_tooltip": "Speertreffers vinden de kieren: wezens die bestand zijn tegen doorboring krijgen normale schade, andere krijgen doorboringsschade alsof ze er één stap zwakker tegen zijn. Na verbetering keren geworpen speren naar je terug zodra ze landen."
 }

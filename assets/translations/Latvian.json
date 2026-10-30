@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "Odins pieprasa tavus ienaidniekus",
   "se_spearbreaker_tooltip": "Šķēpa trāpījumi $2 s laikā nodara par $1% vairāk dūriena bojājumu.",
   "se_spearbreaker_passive": "Gungnira tēmēklis",
-  "se_spearbreaker_passive_tooltip": "Šķēpa trāpījumi atrod spraugas: radības, kas izturīgas pret dūrieniem, saņem parastus bojājumus, pārējās saņem dūriena bojājumus tā, it kā būtu par pakāpi vājākas pret tiem."
+  "se_spearbreaker_passive_tooltip": "Šķēpa trāpījumi atrod spraugas: radības, kas izturīgas pret dūrieniem, saņem parastus bojājumus, pārējās saņem dūriena bojājumus tā, it kā būtu par pakāpi vājākas pret tiem. Pēc uzlabošanas mestie šķēpi atgriežas pie tevis, tiklīdz tie piezemējas."
 }

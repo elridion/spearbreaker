@@ -2,7 +2,8 @@
 
 Valheim mod adding one trinket, the **Spearbreaker charm** (display names: item "Spearbreaker",
 passive "Gungnir's Aim", active "Odin's Claim"). While worn, its passive `SE_SpearbreakerPassive`
-makes spear hits (melee and thrown) treat a creature as one step weaker to pierce; at full adrenaline
+makes spear hits (melee and thrown) treat a creature as one step weaker to pierce; the quality 2
+charm also recalls the wearer's thrown spears a moment after they land. At full adrenaline
 `SE_Spearbreaker` adds extra pierce damage for a while. Vanilla spears and bows share the pierce
 type; this gives spears their own answer without adding a damage type.
 
@@ -13,7 +14,8 @@ Stack, build, verification and git workflow are shared by all mods: see `../CLAU
 
 - `src/SpearbreakerItem.cs` registers the trinket (clone of `TrinketBronzeHealth`, the Heart of the
   Forest), recipe, recolour and icons; `src/SE_SpearbreakerPassive.cs` and `src/SE_Spearbreaker.cs`
-  the two effects; `src/DamagePatches.cs` the resistance shift.
+  the two effects; `src/DamagePatches.cs` the resistance shift; `src/ThrowPatches.cs` the thrown
+  spear recall.
 - `assets/icon.png` fallback icon (embedded as `Spearbreaker.icon.png`); `tools/make_icons.ps1`
   generates it and `package/icon.png`.
 

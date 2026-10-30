@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "Odyn rości sobie prawo do twoich wrogów",
   "se_spearbreaker_tooltip": "Trafienia włócznią zadają przez $2 s o $1% więcej obrażeń od przebicia.",
   "se_spearbreaker_passive": "Celność Gungnira",
-  "se_spearbreaker_passive_tooltip": "Trafienia włócznią znajdują luki: stworzenia odporne na przebicie otrzymują normalne obrażenia, pozostałe otrzymują obrażenia od przebicia, jakby były o stopień bardziej na nie podatne."
+  "se_spearbreaker_passive_tooltip": "Trafienia włócznią znajdują luki: stworzenia odporne na przebicie otrzymują normalne obrażenia, pozostałe otrzymują obrażenia od przebicia, jakby były o stopień bardziej na nie podatne. Po ulepszeniu rzucone włócznie wracają do ciebie, gdy tylko wylądują."
 }

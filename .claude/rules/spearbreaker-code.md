@@ -22,6 +22,19 @@ Adds to the workspace-wide `code-style.md` and `valheim-modding.md` in `../.clau
 - Resistant, VeryResistant and SlightlyResistant pierce become Normal; Normal and SlightlyWeak become
   Weak; Weak becomes VeryWeak. Immune, Ignore and VeryWeak are untouched. Player targets (PvP) keep
   vanilla modifiers.
+- **Thrown spear recall** (passive, quality 2 charm only; `ThrowPatches` checks the equipped charm's
+  `m_quality` against `SpearbreakerItem.RecallQuality`, since the passive's attribute bit carries no
+  quality): a throw unequips the spear and removes it from the inventory
+  (`Attack.ConsumeItem`); vanilla respawns it with `ItemDrop.DropItem` inside `Projectile.SpawnOnHit`
+  (impact or TTL), on the thrower's side. `ThrowPatches` flags that call when the projectile's
+  `m_spawnItem` is a spear and its owner is the local player wearing the charm, and picks the
+  returned drop up at once with vanilla `Humanoid.Pickup` unless the thrower died meanwhile. Vanilla
+  pickup already files the spear back into the slot it was thrown from, re-equips it into an empty
+  hand and refuses when the inventory is full; don't redo any of that in the patch. The pickup runs
+  in a coroutine on the thrower after `RecallDelay` (1 s), skipped if the drop is gone or the
+  thrower died. A successful recall plays vanilla `vfx_odin_despawn` at the landing point and
+  `vfx_Potion_eitr_minor` on the thrower, looked up on first use; a missing prefab warns once and
+  only drops that visual.
 - Damage patches run for every hit in the game: bail out on the cheapest check first, never allocate
   or log there.
 

@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "Odin düşmanlarını sahipleniyor",
   "se_spearbreaker_tooltip": "Mızrak darbeleri $2 sn boyunca %$1 daha fazla delme hasarı verir.",
   "se_spearbreaker_passive": "Gungnir'in Nişanı",
-  "se_spearbreaker_passive_tooltip": "Mızrak darbeleri boşlukları bulur: delmeye dirençli yaratıklar normal hasar alır, diğerleri ise delmeye karşı bir kademe daha zayıfmış gibi delme hasarı alır."
+  "se_spearbreaker_passive_tooltip": "Mızrak darbeleri boşlukları bulur: delmeye dirençli yaratıklar normal hasar alır, diğerleri ise delmeye karşı bir kademe daha zayıfmış gibi delme hasarı alır. Geliştirildikten sonra fırlatılan mızraklar yere düşer düşmez sana geri döner."
 }

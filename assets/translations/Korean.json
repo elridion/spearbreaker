@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "오딘이 당신의 적을 취합니다",
   "se_spearbreaker_tooltip": "창 공격이 $2초 동안 관통 피해를 $1% 더 줍니다.",
   "se_spearbreaker_passive": "궁니르의 조준",
-  "se_spearbreaker_passive_tooltip": "창 공격이 틈을 찾아냅니다: 관통에 저항하는 생물은 일반 피해를 받고, 나머지는 관통에 한 단계 더 약한 것처럼 관통 피해를 받습니다."
+  "se_spearbreaker_passive_tooltip": "창 공격이 틈을 찾아냅니다: 관통에 저항하는 생물은 일반 피해를 받고, 나머지는 관통에 한 단계 더 약한 것처럼 관통 피해를 받습니다. 강화 후에는 던진 창이 떨어지자마자 당신에게 돌아옵니다."
 }

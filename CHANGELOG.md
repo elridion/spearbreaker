@@ -4,6 +4,9 @@
 
 - The trinket is now a Swamp-tier craft: 5 Iron, 5 Guck and 1 Abomination trophy at the Forge.
   Charms you already crafted keep working.
+- The trinket can be upgraded once at a level 2 Forge for 1 Dragon Egg. While you wear the upgraded
+  trinket, a moment after a spear you throw lands, it vanishes in Odin's smoke and returns to you
+  in a blue sparkle.
 - Players on 0.1.x and 0.2.x cannot play together; everyone needs 0.2.0.
 
 ## 0.1.5

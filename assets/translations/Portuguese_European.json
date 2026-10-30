@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "Odin reclama os teus inimigos",
   "se_spearbreaker_tooltip": "Os golpes de lança causam mais $1% de dano perfurante durante $2 s.",
   "se_spearbreaker_passive": "Pontaria de Gungnir",
-  "se_spearbreaker_passive_tooltip": "Os golpes de lança encontram as brechas: as criaturas resistentes a dano perfurante sofrem dano normal, as restantes sofrem dano perfurante como se fossem um grau mais vulneráveis a ele."
+  "se_spearbreaker_passive_tooltip": "Os golpes de lança encontram as brechas: as criaturas resistentes a dano perfurante sofrem dano normal, as restantes sofrem dano perfurante como se fossem um grau mais vulneráveis a ele. Após a melhoria, as lanças arremessadas voltam para ti assim que caem."
 }

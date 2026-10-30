@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "Óðinn gerir tilkall til óvina þinna",
   "se_spearbreaker_tooltip": "Spjóthögg valda $1% meiri stunguskaða í $2 sek.",
   "se_spearbreaker_passive": "Mið Gungnis",
-  "se_spearbreaker_passive_tooltip": "Spjóthögg finna glufurnar: verur sem standast stungu fá venjulegan skaða, aðrar fá stunguskaða eins og þær væru einu stigi veikari fyrir henni."
+  "se_spearbreaker_passive_tooltip": "Spjóthögg finna glufurnar: verur sem standast stungu fá venjulegan skaða, aðrar fá stunguskaða eins og þær væru einu stigi veikari fyrir henni. Eftir uppfærslu snúa köstuð spjót aftur til þín um leið og þau lenda."
 }

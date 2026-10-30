@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "Ódin si nárokuje tvojich nepriateľov",
   "se_spearbreaker_tooltip": "Zásahy kopijou spôsobujú počas $2 s o $1 % viac prienikového poškodenia.",
   "se_spearbreaker_passive": "Gungnirovo mierenie",
-  "se_spearbreaker_passive_tooltip": "Zásahy kopijou nachádzajú medzery: tvory odolné voči prieniku utrpia normálne poškodenie, ostatné utrpia prienikové poškodenie, akoby voči nemu boli o stupeň zraniteľnejšie."
+  "se_spearbreaker_passive_tooltip": "Zásahy kopijou nachádzajú medzery: tvory odolné voči prieniku utrpia normálne poškodenie, ostatné utrpia prienikové poškodenie, akoby voči nemu boli o stupeň zraniteľnejšie. Po vylepšení sa hodené kopije k tebe vrátia, hneď ako dopadnú."
 }

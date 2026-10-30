@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "奧丁征討你的敵人",
   "se_spearbreaker_tooltip": "長矛命中造成的穿刺傷害提高 $1%，持續 $2 秒。",
   "se_spearbreaker_passive": "岡格尼爾之準",
-  "se_spearbreaker_passive_tooltip": "長矛命中能找到破綻：抵抗穿刺的生物受到普通傷害，其他生物受到的穿刺傷害如同其對穿刺的弱點提高一級。"
+  "se_spearbreaker_passive_tooltip": "長矛命中能找到破綻：抵抗穿刺的生物受到普通傷害，其他生物受到的穿刺傷害如同其對穿刺的弱點提高一級。升級後，投出的長矛一落地就會回到你身邊。"
 }

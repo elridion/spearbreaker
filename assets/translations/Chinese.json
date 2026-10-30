@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "奥丁征讨你的敌人",
   "se_spearbreaker_tooltip": "长矛命中造成的戳刺伤害提高 $1%，持续 $2 秒。",
   "se_spearbreaker_passive": "冈格尼尔之准",
-  "se_spearbreaker_passive_tooltip": "长矛命中能找到破绽：抵抗戳刺的生物受到普通伤害，其他生物受到的戳刺伤害如同其对戳刺的弱点提高一级。"
+  "se_spearbreaker_passive_tooltip": "长矛命中能找到破绽：抵抗戳刺的生物受到普通伤害，其他生物受到的戳刺伤害如同其对戳刺的弱点提高一级。升级后，投出的长矛一落地就会回到你身边。"
 }

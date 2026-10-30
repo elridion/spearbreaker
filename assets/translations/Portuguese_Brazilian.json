@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "Odin reivindica seus inimigos",
   "se_spearbreaker_tooltip": "Golpes de lança causam $1% a mais de dano perfurante por $2 s.",
   "se_spearbreaker_passive": "Mira de Gungnir",
-  "se_spearbreaker_passive_tooltip": "Golpes de lança encontram as brechas: criaturas resistentes a dano perfurante sofrem dano normal, as demais sofrem dano perfurante como se fossem um grau mais vulneráveis a ele."
+  "se_spearbreaker_passive_tooltip": "Golpes de lança encontram as brechas: criaturas resistentes a dano perfurante sofrem dano normal, as demais sofrem dano perfurante como se fossem um grau mais vulneráveis a ele. Após o aprimoramento, lanças arremessadas voltam para você assim que caem."
 }

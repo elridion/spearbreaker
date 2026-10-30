@@ -5,5 +5,5 @@
   "se_spearbreaker_start": "Odin gjør krav på fiendene dine",
   "se_spearbreaker_tooltip": "Spydtreff gir $1 % mer spiddskade i $2 s.",
   "se_spearbreaker_passive": "Gungnirs sikte",
-  "se_spearbreaker_passive_tooltip": "Spydtreff finner glippene: vesener som tåler spidd, tar normal skade, andre tar spiddskade som om de var ett trinn svakere mot det."
+  "se_spearbreaker_passive_tooltip": "Spydtreff finner glippene: vesener som tåler spidd, tar normal skade, andre tar spiddskade som om de var ett trinn svakere mot det. Etter oppgradering kommer kastede spyd tilbake til deg så snart de lander."
 }
