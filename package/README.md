@@ -31,9 +31,9 @@ as hard. Bow get nothing. Spear happy.
 | Quality | Station | Cost |
 | --- | --- | --- |
 | 1 | Forge level 1 | 5 Iron, 5 Guck, 1 Abomination trophy |
-| 2 (upgrade, thrown spear recall) | Forge level 2 | 1 Dragon Egg |
+| 2 (upgrade, thrown spear recall) | Forge level 2 | 5 Silver, 1 Thunderstone |
 
-Dragon Eggs can't go through portals, so the upgrade means carrying one to your Forge.
+The Thunderstone is the one Haldor sells for the Obliterator.
 
 ## Configuration
 

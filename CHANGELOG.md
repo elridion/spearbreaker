@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- The trinket's upgrade now costs 5 Silver and 1 Thunderstone instead of a Dragon Egg.
+
 ## 0.2.0
 
 - The trinket is now a Swamp-tier craft: 5 Iron, 5 Guck and 1 Abomination trophy at the Forge.

@@ -61,14 +61,15 @@ namespace Spearbreaker
                 Description = "$item_trinket_spearbreaker_description",
                 CraftingStation = CraftingStations.Forge,
                 MinStationLevel = 1,
-                // Swamp tier, like the vanilla Iron Brooch. The upgrade costs only a Dragon Egg, which
-                // can't go through a portal, so it has to be carried to the Forge on foot.
+                // Swamp tier, like the vanilla Iron Brooch. The upgrade costs Silver and a Thunderstone,
+                // which Haldor sells only after the Elder falls, the same stone the Obliterator needs.
                 Requirements = new[]
                 {
                     new RequirementConfig("Iron", 5),
                     new RequirementConfig("Guck", 5),
                     new RequirementConfig("TrophyAbomination", 1),
-                    new RequirementConfig("DragonEgg", 0, 1),
+                    new RequirementConfig("Silver", 0, 5),
+                    new RequirementConfig("Thunderstone", 0, 1),
                 },
             };
             if (icon) config.Icons = new[] { icon };
