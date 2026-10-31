@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+- No gameplay changes. Players on 0.2.x can still play together.
+
 ## 0.2.1
 
 - The trinket's upgrade now costs 5 Silver and 1 Thunderstone instead of a Dragon Egg.
