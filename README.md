@@ -1,8 +1,8 @@
 # Spearbreaker
 
-Valheim mod (BepInEx + Jotunn) adding the Spearbreaker charm: a trinket whose full-adrenaline effect
-lets spear hits ignore pierce resistance and deal extra pierce damage, so spears stop sharing every
-weakness of bows.
+Valheim mod (BepInEx + Jotunn) adding the Spearbreaker charm: a trinket that makes spear hits treat
+creatures as one step weaker to pierce, adds extra pierce damage at full adrenaline and, once
+upgraded, recalls thrown spears, so spears stop sharing every weakness of bows.
 
 Players: install it from a mod manager. Features, recipe and settings are on the mod page, whose
 source is [`package/README.md`](package/README.md).

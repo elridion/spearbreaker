@@ -39,7 +39,7 @@
 
   <!-- Thunderstore/Hexium package: dotnet build -c Release -t:Package -->
   <PropertyGroup>
-    <PackageDescription>A bronze trinket that lets spears punch through pierce resistance.</PackageDescription>
+    <PackageDescription>A trinket for spears: hits treat creatures as one step weaker to pierce, full adrenaline adds extra pierce damage, and the upgraded charm recalls thrown spears.</PackageDescription>
     <PackageWebsite>https://discord.gg/fBtGdJ6YSs</PackageWebsite>
     <PackageDependencies>"ValheimModding-Jotunn-2.30.2"</PackageDependencies>
     <PackageStagingDir>$(BaseIntermediateOutputPath)package\</PackageStagingDir>
