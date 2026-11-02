@@ -6,23 +6,27 @@ using UnityEngine;
 namespace Spearbreaker
 {
     /// <summary>
-    /// Recalls a thrown spear to a player wearing the upgraded Spearbreaker charm shortly after it lands.
+    /// Recalls a thrown spear to a player wearing the upgraded Spearbreaker charm after it lands.
     /// Vanilla removes the spear from the inventory on the throw and turns it back into an item drop in
     /// <c>Projectile.SpawnOnHit</c>, on the thrower's side; the drop made during that call is picked up
-    /// after <see cref="RecallDelay"/> through vanilla <c>Humanoid.Pickup</c>, which files it back into the
-    /// slot it was thrown from and re-equips it into an empty hand. With no room in the inventory the
+    /// through vanilla <c>Humanoid.Pickup</c>, which files it back into the slot it was thrown from and
+    /// re-equips it into an empty hand. The wait grows with the distance, one second per
+    /// <see cref="RecallSpeed"/> metres, as if the spear flew home. With no room in the inventory the
     /// spear stays where it landed, as in vanilla. The spear vanishes in Odin's despawn smoke and arrives
-    /// with a blue sparkle on the thrower, so it visibly travels instead of silently reappearing.
+    /// with the frost resistance mead's drinking effect on the thrower, so it visibly travels instead of
+    /// silently reappearing.
     /// </summary>
     [HarmonyPatch]
     internal static class ThrowPatches
     {
-        // Long enough to see the spear land and stick before it is called back.
-        private const float RecallDelay = 1f;
+        // The spear flies home at this speed in metres per second: 30 m between the thrower and the
+        // landing point means a one second wait, so a far throw visibly takes longer to come back.
+        private const float RecallSpeed = 30f;
         // The smoke Odin vanishes in, where the spear leaves the ground; fits the charm's Odin theme.
         private const string VanishEffectPrefab = "vfx_odin_despawn";
-        // The blue swirl of the minor eitr mead, on the thrower as the spear arrives.
-        private const string ArriveEffectPrefab = "vfx_Potion_eitr_minor";
+        // The mead whose drinking effect plays on the thrower as the spear arrives. Read from the mead's
+        // status effect rather than named as a vfx prefab, so it always matches what drinking it shows.
+        private const string ArriveEffectItem = "MeadFrostResist";
 
         private static Player s_thrower;
         private static EffectList s_vanishEffect;
@@ -68,13 +72,14 @@ namespace Spearbreaker
             if (!s_thrower || !__result) return;
             Player thrower = s_thrower;
             s_thrower = null;
+            float delay = Vector3.Distance(thrower.transform.position, __result.transform.position) / RecallSpeed;
             // Runs on the player, so it stops on its own if the player logs out or is destroyed.
-            thrower.StartCoroutine(Recall(thrower, __result));
+            thrower.StartCoroutine(Recall(thrower, __result, delay));
         }
 
-        private static IEnumerator Recall(Player thrower, ItemDrop drop)
+        private static IEnumerator Recall(Player thrower, ItemDrop drop, float delay)
         {
-            yield return new WaitForSeconds(RecallDelay);
+            yield return new WaitForSeconds(delay);
 
             // Someone may have picked the spear up meanwhile. A thrower who died has already left a
             // tombstone; picking the spear up now would file it into an inventory about to be destroyed.
@@ -84,7 +89,7 @@ namespace Spearbreaker
 
             LoadEffects();
             s_vanishEffect?.Create(landedAt, Quaternion.identity);
-            s_arriveEffect?.Create(thrower.GetCenterPoint(), Quaternion.identity, thrower.transform);
+            s_arriveEffect?.Create(thrower.GetCenterPoint(), thrower.transform.rotation, thrower.transform);
         }
 
         // Looked up on the first recall rather than at startup: the effects are optional, and a missing
@@ -94,7 +99,7 @@ namespace Spearbreaker
             if (s_effectsLoaded) return;
             s_effectsLoaded = true;
             s_vanishEffect = LoadEffect(VanishEffectPrefab);
-            s_arriveEffect = LoadEffect(ArriveEffectPrefab);
+            s_arriveEffect = LoadMeadEffect(ArriveEffectItem);
         }
 
         private static EffectList LoadEffect(string name)
@@ -109,6 +114,21 @@ namespace Spearbreaker
             {
                 m_effectPrefabs = new[] { new EffectList.EffectData { m_prefab = prefab } }
             };
+        }
+
+        // The vanilla mead's own start effects are only played, never changed, so sharing the list is safe.
+        private static EffectList LoadMeadEffect(string itemName)
+        {
+            GameObject prefab = PrefabManager.Cache.GetPrefab<GameObject>(itemName);
+            ItemDrop itemDrop = prefab ? prefab.GetComponent<ItemDrop>() : null;
+            StatusEffect statusEffect = itemDrop ? itemDrop.m_itemData.m_shared.m_consumeStatusEffect : null;
+            EffectList effects = statusEffect ? statusEffect.m_startEffects : null;
+            if (effects == null || !effects.HasEffects())
+            {
+                Jotunn.Logger.LogWarning($"Drinking effect of '{itemName}' not found; thrown spears are recalled without it.");
+                return null;
+            }
+            return effects;
         }
     }
 }

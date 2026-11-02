@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.3
+
+- A recalled spear now takes one second for every 30 m between you and where it landed, instead of
+  always one second, so nearby throws come back almost at once.
+- A recalled spear now arrives with the frost resistance mead's effect instead of a blue sparkle.
+- Players on 0.2.x can still play together.
+
 ## 0.2.2
 
 - No gameplay changes. Players on 0.2.x can still play together.
