@@ -1,69 +1,48 @@
 # Spearbreaker
 
-A blue-grey tin trinket that lets spears punch through pierce resistance, with a burst of extra damage at
-full adrenaline.
+A trinket for spear fighters. While you wear it, your spears treat creatures as one step weaker to pierce, full adrenaline adds a burst of extra damage, and the upgraded charm brings your thrown spears back to you.
 
-## Why
+## Features
 
-Spear and bow make same hurt: pierce. Monster laugh at arrow, monster laugh at spear too. Spear sad.
-
-Charm fix. Wear charm, spear find gap in monster skin. Fight hard, charm get angry, spear hit twice
-as hard. Bow get nothing. Spear happy.
-
-## The Spearbreaker trinket
-
-- A trinket, worn in the trinket slot like the vanilla ones.
-- **Gungnir's Aim (while worn):** your spear hits treat creatures as one step weaker to pierce.
-  - Creatures that resist pierce (slightly, normally or very) take normal pierce damage.
-  - Creatures with no pierce modifier take pierce damage as if weak to it.
-  - Creatures slightly weak to pierce become weak; weak becomes very weak.
-  - Creatures immune to pierce stay immune.
-  - **Upgraded charm:** after a spear you throw lands, it vanishes in Odin's smoke and returns to
-    you in the frost resistance mead's shimmer, one second for every 30 m it flew from you. It goes
-    into the inventory slot it was thrown from and back into your hand if it is still empty. With a full inventory the spear stays where it landed.
-- **Odin's Claim (30 s):** fighting fills the trinket's adrenaline bar; when it is full, your spear hits deal
-  100% more pierce damage, on top of the passive.
-- Works for melee spear attacks and thrown spears. Bows, crossbows and atgeirs are unchanged.
-- Only affects creatures: in PvP, players keep their own resistances.
+- **Gungnir's Aim (while worn):** spear hits, melee and thrown, treat creatures as one step weaker
+  to pierce. Resistant creatures take normal damage, normal ones take damage as if weak, and weak
+  ones become very weak. Immune creatures stay immune.
+- **Odin's Claim:** when the trinket's adrenaline bar is full, your spear hits deal 100% more
+  pierce damage for 30 seconds.
+- **Upgraded charm:** a thrown spear returns to you after it lands, one second for every 30 m it
+  flew, back into its slot and your hand. With a full inventory it stays where it landed.
+- Bows, crossbows and atgeirs are unchanged, and in PvP players keep their own resistances.
 
 ## Recipe
 
 | Quality | Station | Cost |
 | --- | --- | --- |
 | 1 | Forge level 1 | 5 Iron, 5 Guck, 1 Abomination trophy |
-| 2 (upgrade, thrown spear recall) | Forge level 2 | 5 Silver, 1 Thunderstone |
+| 2 (thrown spear recall) | Forge level 2 | 5 Silver, 1 Thunderstone |
 
 The Thunderstone is the one Haldor sells for the Obliterator.
 
+## Installation
+
+- Every client and the server need the mod, at the same minor version. Requires
+  [Jotunn](https://thunderstore.io/c/valheim/p/ValheimModding/Jotunn/).
+- The trinket and its effects follow the game's language, in every language Valheim offers except
+  Abenaki. The translations have not been checked by native speakers yet.
+- Uninstalling removes crafted charms from inventories and chests, since the game no longer knows
+  the item; the materials are not refunded.
+
 ## Configuration
 
-`BepInEx/config/elridion.spearbreaker.cfg`. On a server, the server's values apply to everyone.
+Settings are in `BepInEx/config/elridion.spearbreaker.cfg` (or a config manager). On a server, the
+server's values apply to everyone.
 
-| Setting | Default | Meaning |
+| Key | Default | Description |
 | --- | --- | --- |
-| `Duration` | 30 | Seconds the active effect lasts |
-| `AdrenalineToFill` | 50 | Adrenaline needed to fire the active effect (vanilla Heart of the Forest: 50) |
-| `PierceBonus` | 1 | Extra pierce damage on spear hits while the active effect lasts (1 = +100%) |
-
-## Languages
-
-The trinket and its effects follow the game's language setting, in every language Valheim offers
-except Abenaki, which shows English. The translations have not been checked by native speakers yet;
-corrections are welcome on GitHub (see below).
-
-## Requirements
-
-- BepInEx for Valheim
-- [Jotunn](https://thunderstore.io/c/valheim/p/ValheimModding/Jotunn/)
-
-Every client and the server need the mod installed, at the same minor version.
-
-## Uninstalling
-
-Remove the mod from your mod manager. Charms you have crafted disappear from inventories and chests,
-since the game no longer knows the item; the materials are not refunded.
+| `Duration` | 30 | Seconds Odin's Claim lasts (5-300). |
+| `AdrenalineToFill` | 50 | Adrenaline needed to trigger Odin's Claim (10-200). |
+| `PierceBonus` | 1 | Extra pierce damage during Odin's Claim, 1 = +100% (0-3). |
 
 ## Credits
 
-- Mod icon: "Shield impact" by Delapouite from [game-icons.net](https://game-icons.net), licensed under
-  [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Recoloured and outlined.
+- The icon is "Shield impact" by Delapouite from [game-icons.net](https://game-icons.net),
+  licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Recoloured and outlined.

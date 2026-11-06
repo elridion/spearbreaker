@@ -31,7 +31,9 @@ Stack, build, verification and git workflow are shared by all mods: see `../CLAU
 - **Every peer needs the mod:** the resistance shift runs on whichever peer owns the creature.
 - **Docs follow code.** In the same change, `package/README.md` keeps the recipe in sync with
   `SpearbreakerItem`, the settings table and defaults with `SpearbreakerPlugin`, and the effect
-  description with `SE_Spearbreaker` and `DamagePatches`.
+  bullets with `SE_Spearbreaker`, `DamagePatches` and `ThrowPatches`. It stays short (the user's
+  call): its first line matches `<PackageDescription>`, then short features, the recipe, install
+  notes and the settings.
 
 ## Art and licensing
 
