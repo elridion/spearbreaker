@@ -1,6 +1,6 @@
 # Spearbreaker
 
-A trinket for spear fighters. While you wear it, your spears treat creatures as one step weaker to pierce, full adrenaline adds a burst of extra damage, and the upgraded charm brings your thrown spears back to you.
+Makes spears a viable weapon. Craft the Spearbreaker charm to give your spears an edge of their own over bows and get your thrown spears back.
 
 ## Features
 
