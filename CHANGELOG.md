@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.4
+
+- No changes in game; this release only updates the mod page.
+
 ## 0.2.3
 
 - A recalled spear now takes one second for every 30 m between you and where it landed, instead of
